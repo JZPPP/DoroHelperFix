@@ -4,9 +4,9 @@
 
 # 前言
 
-PC 端自用日常任务清理助手：DoroHelper。支持国际服和港澳台服客户端。支持多开。
+PC 端自用日常任务清理助手：DoroHelperFix。支持国际服和港澳台服客户端。支持多开。
 
-![image](https://github.com/kyokakawaii/DoroHelper/blob/main/preview.png)
+![image](https://github.com/JZPPP/DoroHelperFix/blob/main/preview.png)
 
 ### 叠甲：
 
@@ -16,6 +16,11 @@ PC 端自用日常任务清理助手：DoroHelper。支持国际服和港澳台�
 
 程序是根据我自己的账号进度写的，所以可能会有操作不兼容的情况出现。第一次使用最好在旁边看着。万一 Doro 失控，请按 Ctrl + 1 组合键结束进程或者 Ctrl + 2 组合键暂停进程（debug）。
 
+### 再再叠甲：
+
+关键性代码为原项目的作者，项目原作者地址：https://github.com/kyokakawaii/DoroHelperFix 原项目被转手商业化了，因为游戏更新导致部分功能无法使用，我所做的工作仅仅为修补。
+感谢原作者的辛勤付出！本项目源代码依旧开源！
+
 # 下载
 
 在右边的 release 里有我编译好的 exe 文件可以直接用。
@@ -23,6 +28,9 @@ PC 端自用日常任务清理助手：DoroHelper。支持国际服和港澳台�
 不放心的话也可以下载代码，安装 AutoHotkey V2.0 并以管理员模式运行`DoroHelper.ahk`。也可以用任意文本编辑器打开`DoroHelper.ahk`修改（史山）代码以适配自己的情况。
 
 也可以使用 Ahk2Exe 编译`DoroHelper.ahk`自己生成 exe 可执行文件。
+
+## 更新日志
+20250808 修复因方舟UI变更导致卡住 修复因为冠军竞技场的出现导致卡住（先关闭了PJJC的奖励领取,有空再修）
 
 # 功能介绍
 
@@ -103,8 +111,8 @@ Doro 只是想让你少被该死的读条、闪光弹和重复劳动折磨。一
 
 可以尝试设置得和我一样：
 
-![image](https://github.com/kyokakawaii/DoroHelper/blob/67486160e97713900c43cc2c68e176dd65e1f442/img/setting1.png)
-![image](https://github.com/kyokakawaii/DoroHelper/blob/67486160e97713900c43cc2c68e176dd65e1f442/img/setting2.png)
+![image](https://github.com/JZPPP/DoroHelperFix/blob/67486160e97713900c43cc2c68e176dd65e1f442/img/setting1.png)
+![image](https://github.com/JZPPP/DoroHelperFix/blob/67486160e97713900c43cc2c68e176dd65e1f442/img/setting2.png)
 
 # 借物表
 
