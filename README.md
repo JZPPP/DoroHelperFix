@@ -2,6 +2,14 @@
 
 本项目仅供个人学习研究使用，严禁用于商业用途。除 Github 以外其他任何网站、社交平台中有关本项目的内容**均非本人发布**，若造成侵犯著作权、版权或违反网络安全法规等任何后果，均与本人无关。
 
+关键性代码为原项目的作者，项目原作者地址：https://github.com/kyokakawaii/DoroHelperFix 
+
+原项目被转手商业化闭源了，我用起来总是会卡住，无奈只好修复旧版的开源代码以继续使用。
+
+本项目大多数代码均为原开源代码，我所做的工作仅仅为修补。
+
+感谢原作者的辛勤付出！本项目源代码依旧开源！
+
 # 前言
 
 PC 端自用日常任务清理助手：DoroHelperFix。支持国际服和港澳台服客户端。支持多开。
@@ -16,10 +24,8 @@ PC 端自用日常任务清理助手：DoroHelperFix。支持国际服和港澳�
 
 程序是根据我自己的账号进度写的，所以可能会有操作不兼容的情况出现。第一次使用最好在旁边看着。万一 Doro 失控，请按 Ctrl + 1 组合键结束进程或者 Ctrl + 2 组合键暂停进程（debug）。
 
-### 再再叠甲：
 
-关键性代码为原项目的作者，项目原作者地址：https://github.com/kyokakawaii/DoroHelperFix 原项目被转手商业化了，因为游戏更新导致部分功能无法使用，我所做的工作仅仅为修补。
-感谢原作者的辛勤付出！本项目源代码依旧开源！
+
 
 # 下载
 
@@ -118,5 +124,3 @@ Doro 只是想让你少被该死的读条、闪光弹和重复劳动折磨。一
 
 <https://github.com/samfisherirl/Github.ahk-API-for-AHKv2>
 
-<!-- README.md -->
-<img src="https://api.haokur.com/github/viewer-count?username=JZPPP&repo=DoroHelperFix"/>
