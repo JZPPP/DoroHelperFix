@@ -3974,20 +3974,19 @@ if isCheckedAutoCheckUpdate {
 */
 
 ;创建gui
-doroGui := Gui(, "Doro小帮手" currentVersion)
+doroGui := Gui(, "Doro小帮手Fix" currentVersion)
 doroGui.Opt("+Resize")
 doroGui.MarginY := Round(doroGui.MarginY * 0.9)
 doroGui.SetFont("cred s15")
 doroGui.Add("Text", "R1", "紧急停止按ctrl + 1")
-doroGui.Add("Link", " R1", '<a href="https://github.com/kyokakawaii/DoroHelperFix">项目地址</a>')
+doroGui.Add("Link", " R1", '<a href="https://github.com/JZPPP/DoroHelperFix">项目地址</a>')
 doroGui.SetFont()
 doroGui.Add("Button", "R1 x+10", "帮助").OnEvent("Click", ClickOnHelp)
 ;doroGui.Add("Button", "R1 x+10", "检查更新").OnEvent("Click", ClickOnCheckForUpdate)
 Tab := doroGui.Add("Tab3", "xm") ;由于autohotkey有bug只能这样写
 Tab.Add(["doro设置", "收获", "商店", "日常", "默认"])
 Tab.UseTab("doro设置")
-doroGui.Add("Checkbox", IsCheckedToString(isCheckedAutoCheckUpdate) " R2", "自动检查更新(确保能连上github)").OnEvent("Click",
-    ClickAutoCheckUpdate)
+;doroGui.Add("Checkbox", IsCheckedToString(isCheckedAutoCheckUpdate) " R2", "自动检查更新(确保能连上github)").OnEvent("Click",ClickAutoCheckUpdate)
 doroGui.Add("Text", , "点击间隔(单位毫秒)，谨慎更改")
 doroGui.Add("DropDownList", "Choose" SleepTimeToLabel(sleepTime), [750, 1000, 1250, 1500, 1750, 2000]).OnEvent("Change",
     ChangeOnSleepTime)

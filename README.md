@@ -117,3 +117,6 @@ Doro 只是想让你少被该死的读条、闪光弹和重复劳动折磨。一
 # 借物表
 
 <https://github.com/samfisherirl/Github.ahk-API-for-AHKv2>
+
+<!-- README.md -->
+<img src="https://api.haokur.com/github/viewer-count?username=JZPPP&repo=DoroHelperFix"/>
