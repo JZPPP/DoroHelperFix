@@ -6,7 +6,7 @@
 
 PC 端自用日常任务清理助手：DoroHelperFix。支持国际服和港澳台服客户端。支持多开。
 
-![image](https://github.com/JZPPP/DoroHelperFix/blob/main/preview.png)
+![image](https://github.com/JZPPP/DoroHelperFix/blob/main/img/preview.png)
 
 ### 叠甲：
 
@@ -111,8 +111,8 @@ Doro 只是想让你少被该死的读条、闪光弹和重复劳动折磨。一
 
 可以尝试设置得和我一样：
 
-![image](https://github.com/JZPPP/DoroHelperFix/blob/67486160e97713900c43cc2c68e176dd65e1f442/img/setting1.png)
-![image](https://github.com/JZPPP/DoroHelperFix/blob/67486160e97713900c43cc2c68e176dd65e1f442/img/setting2.png)
+![image](https://github.com/JZPPP/DoroHelperFix/blob/main/img/setting1.png)
+![image](https://github.com/JZPPP/DoroHelperFix/blob/main/img/setting2.png)
 
 # 借物表
 
