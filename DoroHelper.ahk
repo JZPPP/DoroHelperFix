@@ -1241,6 +1241,7 @@ FriendPoint() {
 ;=============================================================
 ;6: 模拟室5C
 SimulationRoom() {
+    
     stdTargetX := 2689 ;
     stdTargetY := 1463
     UserClick(stdTargetX, stdTargetY, scrRatio)
@@ -1292,12 +1293,14 @@ SimulationRoom() {
         }
     }
 
-    ;开始模拟
+    ;开始模拟   模拟室界面 点击开始模拟
     stdTargetX := 1917
     stdTargetY := 1274
     UserClick(stdTargetX, stdTargetY, scrRatio)
     Sleep sleepTime
-
+    
+    /*    会卡住先注释，未知用处
+    MsgBox "3"
     stdCkptX := [1687, 1759]
     stdCkptY := [1823, 628]
     desiredColor := ["0x05AFF4", "0x1D1D1C"]
@@ -1310,16 +1313,16 @@ SimulationRoom() {
             ExitApp
         }
     }
-
+*/
     ;选择5C
-    stdTargetX := 2127
+    stdTargetX := 2127 ;5
     stdTargetY := 1074
-    UserClick(stdTargetX, stdTargetY, scrRatio)
+    UserClick(stdTargetX, stdTargetY, scrRatio) 
     Sleep sleepTime // 2
-    UserClick(stdTargetX, stdTargetY, scrRatio)
+    UserClick(stdTargetX, stdTargetY, scrRatio) 
     Sleep sleepTime // 2
 
-    stdTargetX := 2263
+    stdTargetX := 2263  ;C
     stdTargetY := 1307
     UserClick(stdTargetX, stdTargetY, scrRatio)
     Sleep sleepTime // 2
@@ -1330,9 +1333,15 @@ SimulationRoom() {
     ;开始模拟
     stdTargetX := 1891
     stdTargetY := 1818
+    
+    ;快速模拟
+    ;stdTargetX := 2215
+    ;stdTargetY := 1818
+    
+    
     UserClick(stdTargetX, stdTargetY, scrRatio)
     Sleep sleepTime
-
+/*    会卡住先注释，未知用处
     stdCkptX := [1687, 1759]
     stdCkptY := [1823, 628]
     desiredColor := ["0x05AFF4", "0x1D1D1C"]
@@ -1344,8 +1353,7 @@ SimulationRoom() {
             MsgBox "开始模拟失败！"
             ExitApp
         }
-    }
-
+}
     stdCkptX := [1682]
     stdCkptY := [1863]
     desiredColor := ["0x000000"]
@@ -1357,6 +1365,9 @@ SimulationRoom() {
             ExitApp
         }
     }
+    
+    */
+
 
     ;1C-5C
     loop 5 {
@@ -1598,18 +1609,7 @@ SimulationRoom() {
                     }
 
                     if !flag {
-                        /*
-                        stdTargetX := 1908
-                        stdTargetY := 2016
-                        UserClick(stdTargetX, stdTargetY, scrRatio)
-                        Sleep sleepTime // 2
-                        UserClick(stdTargetX, stdTargetY, scrRatio)
-                        Sleep sleepTime // 2
-                        UserClick(stdTargetX, stdTargetY, scrRatio)
-                        Sleep sleepTime // 2
-                        UserClick(stdTargetX, stdTargetY, scrRatio)
-                        Sleep sleepTime
-                        */
+                       
                         continue
                     }
 
@@ -1727,12 +1727,30 @@ SimulationRoom() {
         Sleep sleepTime // 2
     }
 
+/*
+;跳过增益
+    
+    stdCkptX := [2109, 1763]
+    stdCkptY := [1807, 1943]
+    desiredColor := ["0x07A0E4", "0xDEE0E0"]
+
+    Sleep sleepTime*5
+    while !UserCheckColor(stdCkptX, stdCkptY, desiredColor, scrRatio) {
+        UserClick(stdCkptX, stdCkptY, scrRatio)
+        Sleep sleepTime
+        if A_Index > waitTolerance {
+            MsgBox "选择关卡失败！"
+            ExitApp
+        }
+    }
+*/
+    
     ;7C
     stdTargetX := 1916
     stdTargetY := 1471
     UserClick(stdTargetX, stdTargetY, scrRatio)
     Sleep sleepTime
-
+    
     stdCkptX := [837, 951]
     stdCkptY := [1407, 1762]
     desiredColor := ["0xF8FCFE", "0xF8FCFE"]
@@ -1747,6 +1765,7 @@ SimulationRoom() {
     }
 
     ;点击进入战斗
+    
     stdTargetX := 2225
     stdTargetY := 2004
     UserClick(stdTargetX, stdTargetY, scrRatio)
