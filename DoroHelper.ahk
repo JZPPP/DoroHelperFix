@@ -14,7 +14,7 @@ stdScreenH := 2160
 waitTolerance := 50
 colorTolerance := 15
 
-currentVersion := "2025.08.08"
+currentVersion := "2025.08.10"
 usr := "kyokakawaii"
 repo := "DoroHelper"
 
@@ -1805,7 +1805,7 @@ SimulationRoom() {
         UserClick(stdTargetX, stdTargetY, scrRatio)
         Sleep sleepTime
         if A_Index > waitTolerance {
-            MsgBox "模拟室结束异常！"
+            MsgBox "模拟室结束异常！2"
             ExitApp
         }
     }
@@ -1836,7 +1836,9 @@ SimulationRoom() {
     UserClick(stdTargetX, stdTargetY, scrRatio)
     Sleep sleepTime // 2
     */
-
+    
+    
+/*
     ;点击不选择和确定
     tX := 2104
     tY := 1656
@@ -1845,11 +1847,11 @@ SimulationRoom() {
     while !UserCheckColor([tX], [tY], desiredColor, scrRatio) {
         tY := tY + 65
         if tY > 2160 {
-            MsgBox "模拟室结束异常！"
+            MsgBox "模拟室结束异常！3"
             ExitApp
         }
     }
-
+*/
     ;MsgBox "点不选择"
     stdTargetX := 2185
     stdTargetY := tY - 200
@@ -1872,7 +1874,7 @@ SimulationRoom() {
         UserClick(stdTargetX, stdTargetY, scrRatio)
         Sleep sleepTime
         if A_Index > waitTolerance {
-            MsgBox "模拟室结束异常！"
+            MsgBox "模拟室结束异常！4"
             ExitApp
         }
     }
@@ -1944,8 +1946,8 @@ RookieArena(times) {
     if sleepTime < 1500
         Sleep 1000
 
-    stdTargetX := 2278
-    stdTargetY := 1092
+    stdTargetX := 2250
+    stdTargetY := 960
     UserClick(stdTargetX, stdTargetY, scrRatio)
     Sleep sleepTime
     UserClick(stdTargetX, stdTargetY, scrRatio)
@@ -1960,6 +1962,46 @@ RookieArena(times) {
     UserClick(stdTargetX, stdTargetY, scrRatio)
     Sleep sleepTime // 2
     */
+    
+    ;判断pjj浮窗,存在则点击领取
+    
+    stdCkptX1 := [2203]
+    stdCkptY1 := [1002]
+    desiredColor1 := ["0x02C7F5"]
+    stdCkptX2 := [2203]
+    stdCkptY2 := [1005]
+    desiredColor2 := ["0x02C7F5"]
+    stdCkptX3 := [2203]
+    stdCkptY3 := [998]
+    desiredColor3 := ["0x02C7F5"]
+    ;因为浮动所以选取了三个Y位置
+    while UserCheckColor(stdCkptX1, stdCkptY1, desiredColor1, scrRatio)||UserCheckColor(stdCkptX2, stdCkptY2, desiredColor2, scrRatio)||UserCheckColor(stdCkptX3, stdCkptY3, desiredColor3, scrRatio) {
+        if sleepTime < 1500
+        Sleep 1000
+        UserClick(stdCkptX2, stdCkptY2, scrRatio)
+        Sleep 1000
+        UserClick(stdCkptX2, stdCkptY2, scrRatio)
+        Sleep 1000
+        
+    
+        stdTargetX := 2129
+        stdTargetY := 1920
+        UserClick(stdTargetX, stdTargetY, scrRatio)
+        Sleep sleepTime
+        UserClick(stdTargetX, stdTargetY, scrRatio)
+        Sleep sleepTime // 2
+        UserClick(stdTargetX, stdTargetY, scrRatio)
+        Sleep sleepTime // 2
+        Sleep sleepTime
+        if A_Index > 5 {
+        break
+        }
+    }
+    
+    
+    
+    
+    
     ;进入竞技场
     stdTargetX := 2208
     stdTargetY := 1359
