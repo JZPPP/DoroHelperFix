@@ -18,6 +18,8 @@ currentVersion := "2025.08.10"
 usr := "kyokakawaii"
 repo := "DoroHelper"
 
+
+
 ;utilities
 IsSimilarColor(targetColor, color) {
     tr := Format("{:d}", "0x" . substr(targetColor, 3, 2))
@@ -1835,10 +1837,10 @@ SimulationRoom() {
     Sleep sleepTime // 2
     UserClick(stdTargetX, stdTargetY, scrRatio)
     Sleep sleepTime // 2
-    */
     
     
-/*
+    
+
     ;点击不选择和确定
     tX := 2104
     tY := 1656
@@ -1846,12 +1848,13 @@ SimulationRoom() {
 
     while !UserCheckColor([tX], [tY], desiredColor, scrRatio) {
         tY := tY + 65
-        if tY > 2160 {
+        if tY > 2360 {
+            ;2160
             MsgBox "模拟室结束异常！3"
             ExitApp
         }
     }
-*/
+
     ;MsgBox "点不选择"
     stdTargetX := 2185
     stdTargetY := tY - 200
@@ -1878,7 +1881,7 @@ SimulationRoom() {
             ExitApp
         }
     }
-
+*/
     stdTargetX := 2191
     stdTargetY := 1349
     UserClick(stdTargetX, stdTargetY, scrRatio)
@@ -1977,11 +1980,11 @@ RookieArena(times) {
     ;因为浮动所以选取了三个Y位置
     while UserCheckColor(stdCkptX1, stdCkptY1, desiredColor1, scrRatio)||UserCheckColor(stdCkptX2, stdCkptY2, desiredColor2, scrRatio)||UserCheckColor(stdCkptX3, stdCkptY3, desiredColor3, scrRatio) {
         if sleepTime < 1500
-        Sleep 1000
-        UserClick(stdCkptX2, stdCkptY2, scrRatio)
-        Sleep 1000
-        UserClick(stdCkptX2, stdCkptY2, scrRatio)
-        Sleep 1000
+        Sleep 2000
+        UserClick(2203, 1005, scrRatio)
+        Sleep 2000
+        UserClick(2203, 1005, scrRatio)
+        Sleep 5000
         
     
         stdTargetX := 2129
@@ -4003,12 +4006,12 @@ isBoughtTrash := 1
     MsgBox colorTolerance
 }
 */
-/*
+
 if !A_IsAdmin {
     MsgBox "请以管理员身份运行Doro"
     ExitApp
 }
-*/
+
 ;读取设置
 SetWorkingDir A_ScriptDir
 try {
