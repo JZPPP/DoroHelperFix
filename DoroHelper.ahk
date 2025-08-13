@@ -1991,8 +1991,8 @@ RookieArena(times) {
         stdTargetY := 1920
         UserClick(stdTargetX, stdTargetY, scrRatio)
         Sleep sleepTime
-        UserClick(stdTargetX, stdTargetY, scrRatio)
-        Sleep sleepTime // 2
+        ;UserClick(stdTargetX, stdTargetY, scrRatio)
+        ;Sleep sleepTime // 2
         UserClick(stdTargetX, stdTargetY, scrRatio)
         Sleep sleepTime // 2
         Sleep sleepTime
