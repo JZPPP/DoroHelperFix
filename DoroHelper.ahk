@@ -1241,8 +1241,323 @@ FriendPoint() {
 }
 
 ;=============================================================
+
+
 ;6: 模拟室5C
 SimulationRoom() {
+    
+    stdTargetX := 2689 ;
+    stdTargetY := 1463
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime
+    
+    stdCkptX := [64]
+    stdCkptY := [470]
+    desiredColor := ["0xFAA72C"]
+
+
+
+    while UserCheckColor(stdCkptX, stdCkptY, desiredColor, scrRatio) {
+        UserClick(stdTargetX, stdTargetY, scrRatio)
+        Sleep sleepTime // 2
+        if A_Index > waitTolerance {
+            MsgBox "进入方舟失败！"
+            ExitApp
+        }
+    }
+
+    stdCkptX := [1606]
+    stdCkptY := [282]
+    desiredColor := ["0x01D4F6"]
+
+    while !UserCheckColor(stdCkptX, stdCkptY, desiredColor, scrRatio) {
+        Sleep sleepTime
+        if A_Index > waitTolerance {
+            MsgBox "进入方舟失败！"
+            ExitApp
+        }
+    }
+
+    ;进入模拟室
+    stdTargetX := 1547
+    stdTargetY := 1138
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime
+
+    stdCkptX := [1829, 2024]
+    stdCkptY := [1122, 1094]
+    desiredColor := ["0xF8FCFD", "0xF8FCFD"]
+
+    while !UserCheckColor(stdCkptX, stdCkptY, desiredColor, scrRatio) {
+        UserClick(stdTargetX, stdTargetY, scrRatio)
+        Sleep sleepTime
+        if A_Index > waitTolerance {
+            MsgBox "进入模拟室失败！"
+            ExitApp
+        }
+    }
+
+    ;开始模拟   模拟室界面 点击开始模拟
+    stdTargetX := 1917
+    stdTargetY := 1274
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime
+    
+    /*    会卡住先注释，未知用处
+    MsgBox "3"
+    stdCkptX := [1687, 1759]
+    stdCkptY := [1823, 628]
+    desiredColor := ["0x05AFF4", "0x1D1D1C"]
+
+    while !UserCheckColor(stdCkptX, stdCkptY, desiredColor, scrRatio) {
+        UserClick(stdTargetX, stdTargetY, scrRatio)
+        Sleep sleepTime
+        if A_Index > waitTolerance {
+            MsgBox "进入选关失败！"
+            ExitApp
+        }
+    }
+*/
+    ;选择5C
+    ;stdTargetX := 2127 ;5
+    ;stdTargetY := 1074
+    ;UserClick(stdTargetX, stdTargetY, scrRatio) 
+    ;Sleep sleepTime // 2
+    ;UserClick(stdTargetX, stdTargetY, scrRatio) 
+    ;Sleep sleepTime // 2
+
+    ;stdTargetX := 2263  ;C
+    ;stdTargetY := 1307
+    ;UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime // 2
+    ;UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime // 2
+
+    ;点击开始模拟
+    ;开始模拟
+    ;stdTargetX := 1891
+    ;stdTargetY := 1818
+    
+    ;快速模拟
+    stdTargetX := 2215
+    stdTargetY := 1818
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime*3
+/*    会卡住先注释，未知用处
+    stdCkptX := [1687, 1759]
+    stdCkptY := [1823, 628]
+    desiredColor := ["0x05AFF4", "0x1D1D1C"]
+
+    while UserCheckColor(stdCkptX, stdCkptY, desiredColor, scrRatio) {
+        UserClick(stdTargetX, stdTargetY, scrRatio)
+        Sleep sleepTime
+        if A_Index > waitTolerance {
+            MsgBox "开始模拟失败！"
+            ExitApp
+        }
+}
+    stdCkptX := [1682]
+    stdCkptY := [1863]
+    desiredColor := ["0x000000"]
+
+    while !UserCheckColor(stdCkptX, stdCkptY, desiredColor, scrRatio) {
+        Sleep sleepTime
+        if A_Index > waitTolerance {
+            MsgBox "开始模拟失败！"
+            ExitApp
+        }
+    }
+    
+    */
+
+    stdCkptX := [2115]
+    stdCkptY := [1794]
+    desiredColor := ["0x07A0E5"]
+
+    while !UserCheckColor(stdCkptX, stdCkptY, desiredColor, scrRatio) {
+        
+        UserClick(1905, 1942, scrRatio)
+        Sleep sleepTime
+        if A_Index > waitTolerance {
+            MsgBox "快速关卡失败！"
+            ExitApp
+        }
+    }
+
+
+
+    UserClick(1905, 1942, scrRatio)
+
+    
+    
+    ;7C
+    stdTargetX := 1916
+    stdTargetY := 1471
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime
+    
+    stdCkptX := [837, 951]
+    stdCkptY := [1407, 1762]
+    desiredColor := ["0xF8FCFE", "0xF8FCFE"]
+
+    while !UserCheckColor(stdCkptX, stdCkptY, desiredColor, scrRatio) {
+        UserClick(stdTargetX, stdTargetY, scrRatio)
+        Sleep sleepTime
+        if A_Index > waitTolerance {
+            MsgBox "选择关卡失败！"
+            ExitApp
+        }
+    }
+
+    ;点击进入战斗
+    
+    stdTargetX := 2225
+    stdTargetY := 2004
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime // 2
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime // 2
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime // 2
+
+    stdCkptX := [1420, 2335]
+    stdCkptY := [1243, 1440]
+    desiredColor := ["0xFFFFFF", "0xFE0203"]
+
+    while !UserCheckColor(stdCkptX, stdCkptY, desiredColor, scrRatio) {
+        ;UserClick(stdTargetX, stdTargetY - 300, scrRatio)
+        CheckAutoBattle()
+        Sleep sleepTime
+        if A_Index > waitTolerance * 8 {
+            MsgBox "模拟室boss战异常！"
+            ExitApp
+        }
+    }
+
+    stdTargetX := 1898
+    stdTargetY := 1996
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime
+
+    stdCkptX := [2115]
+    stdCkptY := [1305]
+    stdCkptX2 := [2115]
+    stdCkptY2 := [1556]
+    desiredColor := ["0xEFF3F5"]
+
+    while !UserCheckColor(stdCkptX, stdCkptY, desiredColor, scrRatio) && !UserCheckColor(stdCkptX2, stdCkptY2,
+        desiredColor, scrRatio) {
+        UserClick(stdTargetX, stdTargetY, scrRatio)
+        Sleep sleepTime
+        if A_Index > waitTolerance {
+            MsgBox "模拟室结束异常！2"
+            ExitApp
+        }
+    }
+
+    if colorTolerance != 15 {
+        Sleep 5000
+    }
+
+    ;点击模拟结束
+    stdTargetX := 1923
+    stdTargetY := 1276
+    if UserCheckColor(stdCkptX2, stdCkptY2, desiredColor, scrRatio) {
+        stdTargetX := 1923
+        stdTargetY := 1552
+    }
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime // 2
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime // 2
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime
+
+    /*
+    stdTargetX := 1902
+    stdTargetY := 1461
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime // 2
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime // 2
+    
+    
+    
+
+    ;点击不选择和确定
+    tX := 2104
+    tY := 1656
+    desiredColor := ["0x089FE4"]
+
+    while !UserCheckColor([tX], [tY], desiredColor, scrRatio) {
+        tY := tY + 65
+        if tY > 2360 {
+            ;2160
+            MsgBox "模拟室结束异常！3"
+            ExitApp
+        }
+    }
+
+    ;MsgBox "点不选择"
+    stdTargetX := 2185
+    stdTargetY := tY - 200
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime // 2
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime // 2
+
+    ;MsgBox "点击确定"
+    stdTargetX := 2185
+    stdTargetY := tY
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime
+
+    stdCkptX := [2104]
+    stdCkptY := [tY]
+    desiredColor := ["0x089FE4"]
+
+    while UserCheckColor(stdCkptX, stdCkptY, desiredColor, scrRatio) {
+        UserClick(stdTargetX, stdTargetY, scrRatio)
+        Sleep sleepTime
+        if A_Index > waitTolerance {
+            MsgBox "模拟室结束异常！4"
+            ExitApp
+        }
+    }
+*/
+    stdTargetX := 2191
+    stdTargetY := 1349
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime // 2
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime // 2
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime
+
+    ;退回大厅
+    stdTargetX := 333
+    stdTargetY := 2041
+    UserClick(stdTargetX, stdTargetY, scrRatio)
+    Sleep sleepTime
+
+    stdCkptX := [64]
+    stdCkptY := [470]
+    desiredColor := ["0xFAA72C"]
+
+    while !UserCheckColor(stdCkptX, stdCkptY, desiredColor, scrRatio) {
+        UserClick(stdTargetX, stdTargetY, scrRatio)
+        Sleep sleepTime
+        if A_Index > waitTolerance {
+            MsgBox "退回大厅失败！"
+            ExitApp
+        }
+    }
+}
+
+
+
+;6: 模拟室5C
+SimulationRoom1() {
     
     stdTargetX := 2689 ;
     stdTargetY := 1463
@@ -4097,6 +4412,7 @@ doroGui.Add("Checkbox", " R1.2 xs+15", "信用点+盒")
 doroGui.Add("Checkbox", " R1.2 x+1", "战斗数据辑盒")
 doroGui.Add("Checkbox", " R1.2 x+1", "芯尘盒")
 Tab.UseTab("日常")
+
 doroGui.Add("Checkbox", IsCheckedToString(isCheckedSimulationRoom) " R1.2", "模拟室5C(普通关卡需要快速战斗)").OnEvent("Click",
     ClickOnSimulationRoom)
 doroGui.Add("Checkbox", IsCheckedToString(isCheckedRookieArena) " R1.2", "新人竞技场(请点开快速战斗)").OnEvent("Click",
