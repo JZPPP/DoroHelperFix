@@ -1331,7 +1331,7 @@ SimulationRoom() {
     ;UserClick(stdTargetX, stdTargetY, scrRatio)
     Sleep sleepTime // 2
     ;UserClick(stdTargetX, stdTargetY, scrRatio)
-    Sleep sleepTime // 2
+    ;Sleep sleepTime // 2
 
     ;点击开始模拟
     ;开始模拟
@@ -1370,9 +1370,9 @@ SimulationRoom() {
     
     */
 
-    stdCkptX := [2115]
-    stdCkptY := [1794]
-    desiredColor := ["0x07A0E5"]
+    stdCkptX := [837, 951]
+    stdCkptY := [1407, 1762]
+    desiredColor := ["0xF8FCFE", "0xF8FCFE"]
 
     while !UserCheckColor(stdCkptX, stdCkptY, desiredColor, scrRatio) {
         
@@ -1386,14 +1386,15 @@ SimulationRoom() {
 
 
 
-    UserClick(1905, 1942, scrRatio)
+    ;UserClick(1905, 1942, scrRatio)
 
     
     
     ;7C
-    stdTargetX := 1916
-    stdTargetY := 1471
-    UserClick(stdTargetX, stdTargetY, scrRatio)
+    
+    ;stdTargetX := 1916
+    ;stdTargetY := 1471
+    ;UserClick(stdTargetX, stdTargetY, scrRatio)
     Sleep sleepTime
     
     stdCkptX := [837, 951]
