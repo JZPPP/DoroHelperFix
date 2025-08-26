@@ -1296,6 +1296,23 @@ SimulationRoom() {
             ExitApp
         }
     }
+    
+    Sleep sleepTime
+    
+    stdCkptX := [1806, 2064]
+    stdCkptY := [1224, 1224]
+    desiredColor := ["0x1884D7", "0x1884D7"]
+
+    while !UserCheckColor(stdCkptX, stdCkptY, desiredColor, scrRatio) {
+        UserClick(2550, 1125, scrRatio)
+        Sleep sleepTime
+        if A_Index > waitTolerance {
+            MsgBox "超频检测失败！"
+            ExitApp
+        }
+    }
+    
+    
 
     ;开始模拟   模拟室界面 点击开始模拟
     stdTargetX := 1917
