@@ -1300,7 +1300,7 @@ SimulationRoom() {
     Sleep sleepTime
     
     stdCkptX := [1806, 2064]
-    stdCkptY := [1224, 1224]
+    stdCkptY := [1328, 1328]
     desiredColor := ["0x1884D7", "0x1884D7"]
 
     while !UserCheckColor(stdCkptX, stdCkptY, desiredColor, scrRatio) {
